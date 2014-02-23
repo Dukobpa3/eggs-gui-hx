@@ -1,10 +1,12 @@
-package gd.eggs.gui.layout;
+package gd.eggs.gui.core;
+
+import flash.display.Sprite;
 
 /**
  * ...
  * @author Dukobpa3
  */
-class LayoutManager
+class EggsUiSprite extends Sprite
 {
 	//=========================================================================
 	//	STATIC, INLINE PARAMETERS
@@ -19,7 +21,7 @@ class LayoutManager
 	//=========================================================================
 	public function new() 
 	{
-		
+		super();
 	}
 	//=========================================================================
 	//	PUBLIC

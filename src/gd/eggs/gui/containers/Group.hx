@@ -1,13 +1,12 @@
-package gd.eggs.gui.component;
+package gd.eggs.gui.containers;
 
-import flash.display.Sprite;
-import gd.eggs.gui.core.IComponent;
+import gd.eggs.gui.core.Container;
 
 /**
  * ...
  * @author Dukobpa3
  */
-class Component extends Sprite implements IComponent
+class Group extends Container
 {
 	//=========================================================================
 	//	STATIC, INLINE PARAMETERS
@@ -16,7 +15,6 @@ class Component extends Sprite implements IComponent
 	//=========================================================================
 	//	PARAMETERS
 	//=========================================================================
-	public var style(default, null):Dynamic;
 	
 	//=========================================================================
 	//	CONSTRUCTOR, INIT
@@ -25,14 +23,10 @@ class Component extends Sprite implements IComponent
 	{
 		super();
 	}
-	
 	//=========================================================================
 	//	PUBLIC
 	//=========================================================================
-	public function draw():Void
-	{
-		
-	}
+	
 	//=========================================================================
 	//	PRIVATE
 	//=========================================================================

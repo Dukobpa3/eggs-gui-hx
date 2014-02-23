@@ -1,15 +1,16 @@
-package gd.eggs.gui.core;
+package gd.eggs.gui.layouts;
+
+import gd.eggs.gui.containers.IContainer;
 
 /**
  * @author Dukobpa3
  */
-interface IContainer extends IComponent
+interface ILayout 
 {
 	//=========================================================================
 	//	PROPERTIES
 	//=========================================================================
-	public var layout(default, null):ILayout;
-	public var childs(default, null):IComponent;
+	public function arrangeChilds(container:IContainer):Void;
 	//=========================================================================
 	//	METHODS
 	//=========================================================================

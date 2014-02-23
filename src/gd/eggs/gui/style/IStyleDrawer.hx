@@ -1,11 +1,9 @@
-package gd.eggs.gui.core;
-
-import gd.eggs.gui.style.IStylable;
+package gd.eggs.gui.style;
 
 /**
  * @author Dukobpa3
  */
-interface IComponent extends IStylable
+interface IStyleDrawer 
 {
 	//=========================================================================
 	//	PROPERTIES
@@ -14,5 +12,5 @@ interface IComponent extends IStylable
 	//=========================================================================
 	//	METHODS
 	//=========================================================================
-	public function draw():Void;
+	public function draw(component:IStylable):Void;
 }

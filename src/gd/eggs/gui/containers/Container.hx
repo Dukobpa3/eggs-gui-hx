@@ -1,10 +1,14 @@
-package gd.eggs.gui.style;
+package gd.eggs.gui.containers;
+import flgd.eggs.gui.containers.Containert gd.eggs.gui.core.IComponent;
+import gd.eggs.gui.layouts.ILayout;
+import gd.eggs.gui.style.StyleReference;
+import gd.eggs.utils.IAbstractClass;
 
 /**
  * ...
  * @author Dukobpa3
  */
-class StyeManager
+class Container extends Component implements IContainer implements IAbstractClass
 {
 	//=========================================================================
 	//	STATIC, INLINE PARAMETERS
@@ -17,10 +21,8 @@ class StyeManager
 	//=========================================================================
 	//	CONSTRUCTOR, INIT
 	//=========================================================================
-	public function new() 
-	{
-		
-	}
+	public function new() super();
+	
 	//=========================================================================
 	//	PUBLIC
 	//=========================================================================
