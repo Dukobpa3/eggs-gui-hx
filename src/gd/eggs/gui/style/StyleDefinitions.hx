@@ -24,11 +24,11 @@ typedef PositionStyle = { // position for current element in his own parent
 typedef BorderStyle = {
 	?width:String, // = 0,
 	?style:String, // = 'solid',
+	?cornerRadius:String,
 	?color:UInt // = 0x000000
 }
 typedef BackStyle = {
 	?color: UInt,
-	?cornerRadius:String,
 	?alpha:Float, // = 1,
 	?image:String,
 	?repeat:Bool // = false
@@ -36,7 +36,8 @@ typedef BackStyle = {
 
 
 typedef ContentStyle = {
-	?align:String // = 'left'
+	?valign:String, // = 'left'
+	?halign:String // = 'top'
 }
 
 

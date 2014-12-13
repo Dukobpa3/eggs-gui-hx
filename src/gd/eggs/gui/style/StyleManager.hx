@@ -31,7 +31,6 @@ class StyleManager
 		},
 		back: {
 			color:			0x000000,
-			cornerRadius:	'0dp',
 			alpha:			1.0,
 			image:			'',
 			repeat:			false
@@ -39,12 +38,12 @@ class StyleManager
 		border: {
 			width:	'0dp',
 			style:	'solid',
+			cornerRadius:	'0dp',
 			color:	0x000000
 		},
 		
-		
 		content: {
-			halign:	'left'
+			halign:	'left',
 			valign:	'top'
 		},
 		
@@ -58,7 +57,7 @@ class StyleManager
 			bold:	false,
 			italic:	false
 		}
-	}
+	};
 	//=========================================================================
 	//	PARAMETERS
 	//=========================================================================
@@ -81,7 +80,7 @@ class StyleManager
 	//=========================================================================
 	//	CONSTRUCTOR, INIT
 	//=========================================================================
-	private  function new()
+	private  function new() {}
 	//=========================================================================
 	//	PUBLIC
 	//=========================================================================
@@ -97,13 +96,13 @@ class StyleManager
 		_styleSheets.get(theme).set(selector, styles);
 	}
 	
-	public static function updateStyleReference(component:IStylable):StyleReference
+	public static function updateStyleReference(component:IStylable)
 	{
 		var reference:StyleReference = DEFAULT_STYLES;
 		
 		// get type
 		if (_styleSheets.get(_theme).exists(component.styleType)) {
-			mergeReferences(reference, _styleSheets.get(_theme).get(type));
+			mergeReferences(reference, _styleSheets.get(_theme).get(component.styleType));
 		}
 		
 		// get class
@@ -128,8 +127,8 @@ class StyleManager
 	//=========================================================================
 	private static function mergeReferences(base:StyleReference, from:StyleReference)
 	{
-		for (var key:String in from) {
-			for (var key2:String in from[key])
+		for (key in Reflect.fields(from)) {
+			for (key2 in Reflect.fields(Reflect.field(from, key)))
 			{
 				base[key][key2] = from[key][key2];
 			}

@@ -1,5 +1,6 @@
 package gd.eggs.gui.containers;
-import flgd.eggs.gui.containers.Containert gd.eggs.gui.core.IComponent;
+import gd.eggs.gui.containers.Container;
+import gd.eggs.gui.core.IComponent;
 import gd.eggs.gui.layouts.ILayout;
 import gd.eggs.gui.style.StyleReference;
 import gd.eggs.utils.IAbstractClass;

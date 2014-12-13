@@ -1,6 +1,7 @@
 package gd.eggs.gui.core;
 
 import flash.display.Sprite;
+import flash.text.TextField;
 import gd.eggs.gui.style.StyleDefinitions;
 import gd.eggs.gui.style.StyleManager;
 import gd.eggs.utils.IAbstractClass;
@@ -25,8 +26,10 @@ class Component extends EggsUiSprite implements IComponent implements IInitializ
 	public var styleClass(default, null):String;
 	public var styleType(default, null):String;
 	
-	public var style(default, null):StyleReference;
+	public var style(default, default):StyleReference;
 	
+	public var back(default, null):Sprite;
+	public var text(default, null):TextField;
 	//=========================================================================
 	//	CONSTRUCTOR, INIT
 	//=========================================================================
